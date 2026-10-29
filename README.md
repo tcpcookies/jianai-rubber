@@ -2,6 +2,12 @@
 
 Shenzhen Jianai Rubber Products Co., Ltd. 英文企业站，纯静态、零外部依赖，可直接上传到任意虚拟主机 / GitHub Pages / Cloudflare Pages。
 
+## 线上地址（已上线）
+
+- 站点：**https://tcpcookies.github.io/jianai-rubber/**
+- 仓库：https://github.com/tcpcookies/jianai-rubber
+- 部署方式：GitHub Pages（main 分支根目录），每次改完文件重新上传即自动重建，约 1 分钟生效。
+
 ---
 
 ## 一、页面结构
@@ -75,10 +81,12 @@ python3 -m http.server 8099
 
 ---
 
-## 五、上线前要改的两处
+## 五、部署与后续修改
 
-1. **域名**：5 个 HTML 的 `<link rel="canonical">` 和 `og:` 标签里写的是 `https://www.jianai-rubber.com/`，换成实际域名。
-2. 若用 GitHub Pages 部署，需补 `CNAME` 文件；若用服务器部署，注意 `.jpg` 已启用渐进式压缩。
+- 已部署到 GitHub Pages，canonical / og 已改为 `https://tcpcookies.github.io/jianai-rubber/`。
+- 绑定客户自有域名（如 jianai-rubber.com）时：仓库 Settings → Pages → Custom domain 填域名，DNS 加 CNAME 指向 `tcpcookies.github.io`，并勾选 Enforce HTTPS；随后把 5 个 HTML 里的 canonical 换回自有域名。
+- 图片已启用渐进式压缩，`.jpg` 单张 50–160KB，移动端加载无压力。
+- **注意**：GitHub 对成人用品类内容审核较严，Pages 属于免费公共托管，长期商用建议迁到 Cloudflare Pages 或客户自己的服务器/虚拟主机（本目录内容可直接整包上传，无需改动）。
 
 ---
 
